@@ -2,25 +2,24 @@ package io.refreshjava.blog.onebuilder;
 
 import java.time.LocalDate;
 
-/**
- * Example class for refreshJava.io blog.
- */
-public class ProjectMain {
+public final class ProjectMain {
 
     private final String projectID;
     private final String projectName;
     private final String projectManager;
     private final LocalDate projectStartDate;
     private final LocalDate plannedFinishDate;
-    private final LocalDate committedFinishDate;
-    private final long projectDuration;
-    private final Double totalBudget;
-    private final Double earnedValue;
-    private final Double plannedValue;
+    private LocalDate committedFinishDate;
+    private long projectDuration;
+    private Double totalBudget;
+    private Double earnedValue;
+    private Double plannedValue;
 
-    public ProjectMain(final String projectID, final String projectName, final String projectManager, LocalDate projectStartDate,
-        LocalDate plannedFinishDate, LocalDate committedFinishDate, long projectDuration, Double totalBudget,
+    public ProjectMain(String projectID, String projectName, String projectManager,
+        LocalDate projectStartDate, LocalDate plannedFinishDate,
+        LocalDate committedFinishDate, long projectDuration, Double totalBudget,
         Double earnedValue, Double plannedValue) {
+
         this.projectID = projectID;
         this.projectName = projectName;
         this.projectManager = projectManager;
@@ -33,11 +32,17 @@ public class ProjectMain {
         this.plannedValue = plannedValue;
     }
 
-    /**
-     * Main method.
-     * @param args
-     */
+    public String getProjectID() {
+        return projectID;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
     public static void main(final String[] args) {
-        System.out.println("Test");
+        ProjectMain projectMain = new ProjectMain("1", "Project A", null, LocalDate.now(),
+            null, null, 0L, null, null, null);
+        System.out.println("Test: " + projectMain.getProjectName());
     }
 }
