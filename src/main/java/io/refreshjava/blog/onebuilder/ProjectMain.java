@@ -32,17 +32,13 @@ public final class ProjectMain {
         this.plannedValue = plannedValue;
     }
 
-    public String getProjectID() {
-        return projectID;
-    }
-
     public String getProjectName() {
         return projectName;
     }
 
     public static void main(final String[] args) {
-        ProjectMain projectMain = new ProjectMain("1", "Project A", null, LocalDate.now(),
-            null, null, 0L, null, null, null);
-        System.out.println("Test: " + projectMain.getProjectName());
+        ProjectMain projectMain = new ProjectMain("001", "Project A", null, LocalDate.now(),
+            null, null, 10L, 15000.0, null, null);
+        System.out.println("Project: " + projectMain.getProjectName());
     }
 }

@@ -77,7 +77,9 @@
     <module name="SuppressWarningsHolder"/>
 
     <!-- Checks for Javadoc comments.                     -->
-    <!-- See http://checkstyle.sf.net/config_javadoc.html
+    <!-- See http://checkstyle.sf.net/config_javadoc.html -->
+
+    <!--BLOG - does not want this rule
     <module name="JavadocMethod"/>
     <module name="JavadocType"/>
     <module name="JavadocVariable"/>
@@ -169,7 +171,8 @@
     </module>
     <module name="IllegalInstantiation"/>
     <module name="InnerAssignment"/>
-    <module name="MagicNumber"/>
+    <!--BLOG - does not want this rule
+    <module name="MagicNumber"/> -->
     <module name="MissingSwitchDefault"/>
     <module name="SimplifyBooleanExpression"/>
     <module name="SimplifyBooleanReturn"/>
